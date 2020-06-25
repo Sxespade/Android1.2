@@ -1,3 +1,22 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">WeatherApp</string>
+    <string name="status_weather">Облачность</string>
+    <string name="temperature">30°</string>
+    <string name="feels_temperature">26°</string>
+    <string name="feels_humidity">87%</string>
+    <string name="weatherForecast">Прогноз на 24 ч</string>
+    <string name="time1">11:00</string>
+    <string name="degrees1">30°</string>
+    <string name="today">Сегодня</string>
+    <string name="status_today">Дождь</string>
+    <string name="today_degrees">29°</string>
+    <string name="new_york">New-York</string>
+    <string name="london">London</string>
+    <string name="moscow">Moscow</string>
+    <string name="speed_of_wind">Скорость ветра</string>
+    <string name="pressure">Давление</string>
+    <array name="Cities">
+        <item>Moscow</item>
+        <item>Piter</item>
+    </array>
 </resources>
