@@ -15,8 +15,11 @@
     <string name="moscow">Moscow</string>
     <string name="speed_of_wind">Скорость ветра</string>
     <string name="pressure">Давление</string>
+    <string name="weather_show">Show</string>
+    <string name="saveData">Для сохранения данных при повороте</string>
     <array name="Cities">
         <item>Moscow</item>
-        <item>Piter</item>
+        <item>London</item>
+        <item>New-York</item>
     </array>
 </resources>
