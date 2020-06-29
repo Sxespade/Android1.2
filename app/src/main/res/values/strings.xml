@@ -17,6 +17,7 @@
     <string name="pressure">Давление</string>
     <string name="weather_show">Show</string>
     <string name="saveData">Для сохранения данных при повороте</string>
+    <string name="More">Подробнее</string>
     <array name="Cities">
         <item>Moscow</item>
         <item>London</item>

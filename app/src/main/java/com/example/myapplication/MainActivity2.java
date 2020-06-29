@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,8 @@ public class MainActivity2 extends AppCompatActivity {
     private static final String TAG = "myApp";
     ActivityMain2Binding binding;
     MainPresenter presenter = MainPresenter.getInstance();
+    private String TEXT = "TEXT";
+    Parcel parcel = Parcel.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +36,10 @@ public class MainActivity2 extends AppCompatActivity {
         showLog(instanceState + " - onCreate()");
 
         binding.button.setOnClickListener((v) -> {
-            binding.textView6.setText(binding.spinner2.getSelectedItem().toString());
-            presenter.setChooseCity(binding.spinner2.getSelectedItem().toString());
+            Intent intent = new Intent(this, MainActivity.class);
+            parcel.setCity(binding.spinner2.getSelectedItem().toString());
+            intent.putExtra(TEXT, parcel);
+            startActivity(intent);
         });
 
     }
@@ -55,7 +60,7 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         showLog("onResume()");
-        binding.textView6.setText(presenter.getChooseCity());
+//        binding.textView6.setText(presenter.getChooseCity());
     }
 
     @Override

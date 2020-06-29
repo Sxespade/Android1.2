@@ -55,16 +55,6 @@
             android:textAllCaps="false"
             android:textColor="#FFFFFF" />
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="@string/saveData"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.Guideline
