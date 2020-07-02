@@ -3,15 +3,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weather_fragment"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:background="@drawable/weather_fon"
-    android:scaleType="centerCrop"
-    android:id="@+id/act_1">
+    android:scaleType="centerCrop">
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -23,6 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:context=".MainActivity">
+
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline2"
@@ -70,10 +72,9 @@
                     android:src="@drawable/sun_and_clouds_clipart_png"
                     app:layout_constraintBottom_toBottomOf="@id/barrier2"
                     app:layout_constraintEnd_toEndOf="@id/weatherByHour"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@id/textView5"
-                    app:layout_constraintTop_toTopOf="@id/textView"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintTop_toTopOf="@id/textView" />
+
 
                 <androidx.constraintlayout.widget.Barrier
                     android:id="@+id/barrier"
@@ -375,3 +376,4 @@
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
