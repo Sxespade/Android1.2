@@ -14,9 +14,6 @@ public class MainActivity2 extends AppCompatActivity {
 
     private static final String TAG = "myApp";
     ActivityMain2Binding binding;
-    MainPresenter presenter = MainPresenter.getInstance();
-    private String TEXT = "TEXT";
-    Parcel parcel = Parcel.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +31,6 @@ public class MainActivity2 extends AppCompatActivity {
             instanceState = "Повторный запуск!";
         }
         showLog(instanceState + " - onCreate()");
-
-        binding.button.setOnClickListener((v) -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            parcel.setCity(binding.spinner2.getSelectedItem().toString());
-            intent.putExtra(TEXT, parcel);
-            startActivity(intent);
-        });
 
     }
 
