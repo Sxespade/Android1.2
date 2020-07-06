@@ -148,7 +148,10 @@
                     app:layout_constraintStart_toStartOf="@id/guideline"
                     app:layout_constraintTop_toBottomOf="@id/textView5">
 
-                    <include layout="@layout/weather_block_hour" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
