@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -21,10 +23,11 @@ public class CitiesFragment extends Fragment {
     ActivityMain2Binding binding;
     private static final String TAG = "myApp2";
 
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = binding.inflate(inflater, container, false);
+        binding = ActivityMain2Binding.inflate(inflater, container, false);
         return binding.getRoot();
     }
 
@@ -82,7 +85,9 @@ public class CitiesFragment extends Fragment {
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
+        Toast.makeText(getActivity(), "onSaveInstanceState", Toast.LENGTH_SHORT).show();
         outState.putSerializable("CurrentCity", currentParcel);
+        Parcel.data3.add(currentParcel.getCity());
         super.onSaveInstanceState(outState);
     }
 

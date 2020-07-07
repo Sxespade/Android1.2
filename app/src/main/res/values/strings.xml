@@ -18,6 +18,7 @@
     <string name="weather_show">Show</string>
     <string name="saveData">Для сохранения данных при повороте</string>
     <string name="More">Подробнее</string>
+    <string name="prev_disp_cities">Раннее отображенные города</string>
     <array name="Cities">
         <item>Moscow</item>
         <item>London</item>

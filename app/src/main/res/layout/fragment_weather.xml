@@ -4,15 +4,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/weather_fragment"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/weather_fon"
     android:scaleType="centerCrop">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -154,201 +155,25 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="horizontal"
+
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <LinearLayout
-                    android:id="@+id/linearLayout2"
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/backgroundspinner2"
                     android:orientation="vertical"
-                    app:layout_constraintEnd_toEndOf="@id/weatherByHour"
-                    app:layout_constraintStart_toEndOf="@id/guideline"
-                    app:layout_constraintTop_toBottomOf="@id/weatherByHour">
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@+id/appCompatImageView2"
+                    app:layout_constraintStart_toStartOf="@+id/feelWeather"
+                    app:layout_constraintTop_toBottomOf="@id/weatherByHour" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_weight="0.35"
-                            android:text="@string/today"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_weight="0.15"
-                            android:src="@drawable/cloud_with_drops" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.35"
-                            android:text="@string/status_today"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.15"
-                            android:text="@string/today_degrees"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_weight="0.35"
-                            android:text="@string/today"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_weight="0.15"
-                            android:src="@drawable/cloud_with_drops" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.35"
-                            android:text="@string/status_today"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.15"
-                            android:text="@string/today_degrees"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_weight="0.35"
-                            android:text="@string/today"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_weight="0.15"
-                            android:src="@drawable/cloud_with_drops" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.35"
-                            android:text="@string/status_today"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.15"
-                            android:text="@string/today_degrees"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_weight="0.35"
-                            android:text="@string/today"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_weight="0.15"
-                            android:src="@drawable/cloud_with_drops" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.35"
-                            android:text="@string/status_today"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.15"
-                            android:text="@string/today_degrees"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:layout_weight="0.35"
-                            android:text="@string/today"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_height="20dp"
-                            android:layout_weight="0.15"
-                            android:src="@drawable/cloud_with_drops" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.35"
-                            android:text="@string/status_today"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.15"
-                            android:text="@string/today_degrees"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-                </LinearLayout>
 
                 <TextView
                     android:id="@+id/city"
@@ -361,17 +186,42 @@
                     app:layout_constraintStart_toStartOf="@+id/guideline"
                     app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
+                <TextView
+                    android:id="@+id/prev_displ_cities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="invisible"
+                    android:text="@string/prev_disp_cities"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_view2" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/backgroundspinner2"
+                    android:visibility="invisible"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="@+id/recycler_view2"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toBottomOf="@+id/prev_displ_cities" />
+
                 <Button
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/button_effect"
                     android:text="@string/More"
                     android:textAllCaps="false"
-                    app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+                    app:layout_constraintEnd_toEndOf="@+id/recycler_view2"
                     app:layout_constraintStart_toStartOf="@+id/guideline"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                    app:layout_constraintTop_toBottomOf="@+id/recycler_view3" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -379,6 +229,8 @@
         </HorizontalScrollView>
 
     </ScrollView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
