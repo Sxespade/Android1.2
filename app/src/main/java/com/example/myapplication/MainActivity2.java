@@ -13,7 +13,7 @@ import com.example.myapplication.databinding.ActivityMain2Binding;
 public class MainActivity2 extends AppCompatActivity {
 
     private static final String TAG = "myApp";
-    ActivityMain2Binding binding;
+    private ActivityMain2Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

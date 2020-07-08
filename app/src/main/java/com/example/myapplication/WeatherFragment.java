@@ -29,9 +29,9 @@ public class WeatherFragment extends Fragment {
     private String SITE = "https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0";
     private String SITE2 = "https://ru.wikipedia.org/wiki/%D0%9B%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD";
     private String SITE3 = "https://ru.wikipedia.org/wiki/%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA";
-    RecyclerView recyclerView;
-    RecyclerView recyclerView2;
-    RecyclerView recyclerView3;
+    private RecyclerView recyclerView;
+    private RecyclerView recyclerView2;
+    private RecyclerView recyclerView3;
 
     public static WeatherFragment create(Parcel parcel) {
         WeatherFragment f = new WeatherFragment();

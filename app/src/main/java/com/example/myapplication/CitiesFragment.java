@@ -19,8 +19,8 @@ import static com.example.myapplication.MainActivity.PARCEL;
 
 public class CitiesFragment extends Fragment {
     boolean isExistCoatOfArms;
-    Parcel currentParcel;
-    ActivityMain2Binding binding;
+    private Parcel currentParcel;
+    private ActivityMain2Binding binding;
     private static final String TAG = "myApp2";
 
 
