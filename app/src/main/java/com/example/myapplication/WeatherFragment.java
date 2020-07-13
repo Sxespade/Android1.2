@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
+
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,6 +25,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 
 import static com.example.myapplication.MainActivity.PARCEL;
 
@@ -33,6 +37,7 @@ public class WeatherFragment extends Fragment {
     private String SITE = "https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0";
     private String SITE2 = "https://ru.wikipedia.org/wiki/%D0%9B%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD";
     private String SITE3 = "https://ru.wikipedia.org/wiki/%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA";
+
     private RecyclerView recyclerView;
     private RecyclerView recyclerView2;
     private RecyclerView recyclerView3;
@@ -57,6 +62,12 @@ public class WeatherFragment extends Fragment {
         return false;
     };
 
+    RecyclerView recyclerView;
+    RecyclerView recyclerView2;
+    RecyclerView recyclerView3;
+
+
+
     public static WeatherFragment create(Parcel parcel) {
         WeatherFragment f = new WeatherFragment();
         Bundle args = new Bundle();
@@ -80,9 +91,11 @@ public class WeatherFragment extends Fragment {
                              Bundle savedInstanceState) {
         View layout = inflater.inflate(R.layout.fragment_weather, container, false);
 
+
         recyclerView = layout.findViewById(R.id.recycler_view);
         recyclerView2 = layout.findViewById(R.id.recycler_view2);
         recyclerView3 = layout.findViewById(R.id.recycler_view3);
+        recyclerView = layout.findViewById(R.id.recycler_view);
         TextView cityNameView = layout.findViewById(R.id.city);
         Button button2 = layout.findViewById(R.id.button2);
         TextView prevDispCities = layout.findViewById(R.id.prev_displ_cities);
@@ -93,11 +106,11 @@ public class WeatherFragment extends Fragment {
         String[] data = getResources().getStringArray(R.array.temps);
         initRecyclerView(data);
 
+
         String[] data2 = getResources().getStringArray(R.array.Cities);
         initRecyclerView2(data2);
 
         initPrevDispCity(prevDispCities, parcel);
-
 
         button2.setOnClickListener((v) -> {
 
@@ -110,6 +123,7 @@ public class WeatherFragment extends Fragment {
 
         return layout;
     }
+
 
     private void initPrevDispCity(TextView prevDispCities, Parcel parcel) {
         prevDispCities.setVisibility(View.GONE);
@@ -154,10 +168,22 @@ public class WeatherFragment extends Fragment {
 
         recyclerView.setHasFixedSize(true);
 
+
+    private void initRecyclerView(String[] data) {
+
+        // Эта установка служит для повышения производительности системы
+        recyclerView.setHasFixedSize(true);
+
+        // Будем работать со встроенным менеджером
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+//        recyclerView.setLayoutManager(layoutManager);
+
+        // Установим адаптер
         WeatherAdapter adapter = new WeatherAdapter(data);
         recyclerView.setAdapter(adapter);
 
     }
+
 
     private void initRecyclerView2(String[] data) {
 

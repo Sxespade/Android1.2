@@ -48,4 +48,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherAdapter.ViewHold
         }
 
     }
+
 }
+
+
