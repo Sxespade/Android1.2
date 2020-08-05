@@ -6,17 +6,21 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,10 +37,35 @@ public class WeatherFragment extends Fragment {
     private String SITE = "https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0";
     private String SITE2 = "https://ru.wikipedia.org/wiki/%D0%9B%D0%BE%D0%BD%D0%B4%D0%BE%D0%BD";
     private String SITE3 = "https://ru.wikipedia.org/wiki/%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA";
-    RecyclerView recyclerView;
 
+    private RecyclerView recyclerView;
+    private RecyclerView recyclerView2;
+    private RecyclerView recyclerView3;
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = item -> {
+        switch (item.getItemId()) {
+            case R.id.navigation_home:
+                Intent intent = new Intent();
+                intent.setClass(requireContext(), MainActivity3.class);
+                startActivity(intent);
+                return true;
+            case R.id.navigation_dashboard:
+                Intent intent1 = new Intent();
+                intent1.setClass(requireContext(), MainActivity4.class);
+                startActivity(intent1);
+                return true;
+            case R.id.navigation_notifications:
+                Toast.makeText(requireContext(), "Не добавлен", Toast.LENGTH_SHORT).show();
+                return true;
+        }
+        return false;
+    };
+
+    RecyclerView recyclerView;
     RecyclerView recyclerView2;
     RecyclerView recyclerView3;
+
 
 
     public static WeatherFragment create(Parcel parcel) {
@@ -46,6 +75,7 @@ public class WeatherFragment extends Fragment {
         f.setArguments(args);
         return f;
     }
+
 
     public Parcel getParcel() {
         Parcel parcel = null;
@@ -88,6 +118,8 @@ public class WeatherFragment extends Fragment {
 
         });
 
+        BottomNavigationView navView = layout.findViewById(R.id.nav_view);
+        navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         return layout;
     }

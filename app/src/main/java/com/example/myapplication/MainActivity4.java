@@ -1,23 +1,15 @@
 package com.example.myapplication;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.Toast;
 
-import com.example.myapplication.databinding.ActivityMain2Binding;
-import com.example.myapplication.databinding.ActivityMain3Binding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity3 extends AppCompatActivity {
-
-    ActivityMain3Binding binding;
+public class MainActivity4 extends AppCompatActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = item -> {
@@ -33,26 +25,19 @@ public class MainActivity3 extends AppCompatActivity {
                 startActivity(intent1);
                 return true;
             case R.id.navigation_notifications:
+                Toast.makeText(this, "Не добавлен", Toast.LENGTH_SHORT).show();
                 return true;
         }
         return false;
     };
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
-
+        setContentView(R.layout.activity_main4);
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
     }
 
     @Override
@@ -65,5 +50,4 @@ public class MainActivity3 extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

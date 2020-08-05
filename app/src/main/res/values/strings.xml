@@ -19,6 +19,15 @@
     <string name="saveData">Для сохранения данных при повороте</string>
     <string name="More">Подробнее</string>
     <string name="prev_disp_cities">Раннее отображенные города</string>
+    <string name="show">Show</string>
+    <string name="hint">hint</string>
+    <string name="city">City</string>
+    <string name="item4">item4</string>
+    <string name="menu">Menu</string>
+    <string name="about_developers">О разработчиках</string>
+    <string name="main">main</string>
+    <string name="home_screen">Главный экран</string>
+    <string name="options">Настройки</string>
     <array name="Cities">
         <item>Moscow</item>
         <item>London</item>

@@ -13,14 +13,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+
 import com.example.myapplication.databinding.ActivityMain2Binding;
+import com.google.android.material.snackbar.Snackbar;
+
 import static com.example.myapplication.MainActivity.PARCEL;
 
 
 public class CitiesFragment extends Fragment {
     boolean isExistCoatOfArms;
-    Parcel currentParcel;
-    ActivityMain2Binding binding;
+    private Parcel currentParcel;
+    private ActivityMain2Binding binding;
     private static final String TAG = "myApp2";
 
 
@@ -94,6 +97,11 @@ public class CitiesFragment extends Fragment {
     private void initList(View view) {
         binding.button.setOnClickListener((v) -> {
             showCoatOfArms(currentParcel);
+        });
+
+        binding.button3.setOnClickListener((v) -> {
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
         });
     }
 }

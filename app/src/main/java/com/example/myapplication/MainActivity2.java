@@ -9,11 +9,12 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.myapplication.databinding.ActivityMain2Binding;
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity2 extends AppCompatActivity {
 
     private static final String TAG = "myApp";
-    ActivityMain2Binding binding;
+    private ActivityMain2Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
